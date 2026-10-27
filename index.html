@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<!-- saved from url=(0089)file:///C:/Users/ASUS/Downloads/sovereign_jubilee_mou_master_control_dashboard%20(1).html -->
+<!-- saved from url=(0062)file:///C:/Users/ASUS/Downloads/gemini-code-1793116791756.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sovereign Jubilee — MOU &amp; JET EOI Master Control Dashboard</title>
-    <!-- Tailwind CSS -->
-    <script src="./index_files/saved_resource"></script>
+    <title>Sovereign Jubilee — Master Control &amp; File Transmission Hub</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="./Sovereign Jubilee — Master Control &amp; File Transmission Hub_files/saved_resource"></script>
+    
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="./index_files/all.min.css">
+    <link rel="stylesheet" href="./Sovereign Jubilee — Master Control &amp; File Transmission Hub_files/all.min.css">
+    
     <!-- Google Fonts -->
-    <link href="./index_files/css2" rel="stylesheet">
+    <link href="./Sovereign Jubilee — Master Control &amp; File Transmission Hub_files/css2" rel="stylesheet">
+    
     <!-- Chart.js -->
-    <script src="./index_files/chart.js.download"></script>
-    <!-- html2pdf.js for Client-Side PDF Generation -->
-    <script src="./index_files/html2pdf.bundle.min.js.download"></script>
+    <script src="./Sovereign Jubilee — Master Control &amp; File Transmission Hub_files/chart.js.download"></script>
+    
+    <!-- html2pdf.js for PDF Export -->
+    <script src="./Sovereign Jubilee — Master Control &amp; File Transmission Hub_files/html2pdf.bundle.min.js.download"></script>
 
     <script>
         tailwind.config = {
@@ -49,8 +54,16 @@
         .glow-gold {
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
         }
-        .glow-teal {
-            box-shadow: 0 0 25px rgba(0, 128, 128, 0.25);
+        .reading-highlight {
+            border-left: 6px solid #D4AF37 !important;
+            background-color: #FEF3C7 !important;
+            color: #0F172A !important;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            transition: all 0.4s ease;
+        }
+        .sig-canvas {
+            border: 2px dashed #94A3B8;
+            background-color: #FFFFFF;
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
@@ -69,14 +82,13 @@
         @media print {
             .no-print { display: none !important; }
             body { background: white !important; color: black !important; }
-            .print-container { background: white !important; color: black !important; border: none !important; }
         }
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-10{bottom:-2.5rem}.-right-10{right:-2.5rem}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-14{height:3.5rem}.h-2\.5{height:0.625rem}.h-3{height:0.75rem}.h-64{height:16rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-2\.5{width:0.625rem}.w-3{width:0.75rem}.w-64{width:16rem}.w-full{width:100%}.min-w-\[240px\]{min-width:240px}.max-w-3xl{max-width:48rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.625rem * var(--tw-space-x-reverse));margin-left:calc(0.625rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-500\/30{border-color:rgb(245 158 11 / 0.3)}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-gold\/30{border-color:rgb(212 175 55 / 0.3)}.border-gold\/40{border-color:rgb(212 175 55 / 0.4)}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-teal\/40{border-color:rgb(0 128 128 / 0.4)}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-amber-500\/20{background-color:rgb(245 158 11 / 0.2)}.bg-amber-950\/40{background-color:rgb(69 26 3 / 0.4)}.bg-darknavy{--tw-bg-opacity:1;background-color:rgb(6 13 24 / var(--tw-bg-opacity, 1))}.bg-darknavy\/90{background-color:rgb(6 13 24 / 0.9)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-emerald-950\/40{background-color:rgb(2 44 34 / 0.4)}.bg-emeraldgreen{--tw-bg-opacity:1;background-color:rgb(45 106 79 / var(--tw-bg-opacity, 1))}.bg-gold{--tw-bg-opacity:1;background-color:rgb(212 175 55 / var(--tw-bg-opacity, 1))}.bg-gold\/10{background-color:rgb(212 175 55 / 0.1)}.bg-gold\/20{background-color:rgb(212 175 55 / 0.2)}.bg-navy{--tw-bg-opacity:1;background-color:rgb(10 25 47 / var(--tw-bg-opacity, 1))}.bg-panelbg{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-teal{--tw-bg-opacity:1;background-color:rgb(0 128 128 / var(--tw-bg-opacity, 1))}.bg-teal\/20{background-color:rgb(0 128 128 / 0.2)}.bg-opacity-95{--tw-bg-opacity:0.95}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-gold{--tw-gradient-from:#D4AF37 var(--tw-gradient-from-position);--tw-gradient-to:rgb(212 175 55 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-navy{--tw-gradient-from:#0A192F var(--tw-gradient-from-position);--tw-gradient-to:rgb(10 25 47 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-red-600{--tw-gradient-from:#dc2626 var(--tw-gradient-from-position);--tw-gradient-to:rgb(220 38 38 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-panelbg{--tw-gradient-to:rgb(30 41 59 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #1E293B var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-amber-600{--tw-gradient-to:#d97706 var(--tw-gradient-to-position)}.to-darkgreen{--tw-gradient-to:#1B4332 var(--tw-gradient-to-position)}.to-red-700{--tw-gradient-to:#b91c1c var(--tw-gradient-to-position)}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-3{padding-bottom:0.75rem}.pl-4{padding-left:1rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:JetBrains Mono, monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-amberGold{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-gold{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity, 1))}.text-lightteal{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-navy{--tw-text-opacity:1;color:rgb(10 25 47 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:border-amber-500\/50:hover{border-color:rgb(245 158 11 / 0.5)}.hover\:border-emerald-500\/50:hover{border-color:rgb(16 185 129 / 0.5)}.hover\:border-gold\/50:hover{border-color:rgb(212 175 55 / 0.5)}.hover\:border-lightteal\/50:hover{border-color:rgb(20 184 166 / 0.5)}.hover\:bg-darkgreen:hover{--tw-bg-opacity:1;background-color:rgb(27 67 50 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:from-red-500:hover{--tw-gradient-from:#ef4444 var(--tw-gradient-from-position);--tw-gradient-to:rgb(239 68 68 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-red-600:hover{--tw-gradient-to:#dc2626 var(--tw-gradient-to-position)}@media (min-width: 640px){.sm\:inline{display:inline}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:gap-3{gap:0.75rem}.sm\:p-5{padding:1.25rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-center{align-items:center}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-10{bottom:-2.5rem}.-right-10{right:-2.5rem}.top-0{top:0px}.top-16{top:4rem}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-0\.5{margin-bottom:0.125rem}.mb-1{margin-bottom:0.25rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mr-1{margin-right:0.25rem}.mr-1\.5{margin-right:0.375rem}.mt-1{margin-top:0.25rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-3{height:0.75rem}.h-36{height:9rem}.h-64{height:16rem}.h-7{height:1.75rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-3{width:0.75rem}.w-64{width:16rem}.w-7{width:1.75rem}.w-full{width:100%}.min-w-\[240px\]{min-width:240px}.max-w-3xl{max-width:48rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-\[180px\]{max-width:180px}.max-w-none{max-width:none}.flex-1{flex:1 1 0%}.border-collapse{border-collapse:collapse}.scroll-mt-36{scroll-margin-top:9rem}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-10 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(226 232 240 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-emerald-500\/40{border-color:rgb(16 185 129 / 0.4)}.border-gold{--tw-border-opacity:1;border-color:rgb(212 175 55 / var(--tw-border-opacity, 1))}.border-gold\/30{border-color:rgb(212 175 55 / 0.3)}.border-gold\/40{border-color:rgb(212 175 55 / 0.4)}.border-gold\/50{border-color:rgb(212 175 55 / 0.5)}.border-red-500\/30{border-color:rgb(239 68 68 / 0.3)}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/60{border-color:rgb(51 65 85 / 0.6)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-teal\/40{border-color:rgb(0 128 128 / 0.4)}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-darknavy{--tw-bg-opacity:1;background-color:rgb(6 13 24 / var(--tw-bg-opacity, 1))}.bg-darknavy\/90{background-color:rgb(6 13 24 / 0.9)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-gold{--tw-bg-opacity:1;background-color:rgb(212 175 55 / var(--tw-bg-opacity, 1))}.bg-gold\/10{background-color:rgb(212 175 55 / 0.1)}.bg-gold\/20{background-color:rgb(212 175 55 / 0.2)}.bg-navy{--tw-bg-opacity:1;background-color:rgb(10 25 47 / var(--tw-bg-opacity, 1))}.bg-navy\/80{background-color:rgb(10 25 47 / 0.8)}.bg-panelbg{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-red-950\/40{background-color:rgb(69 10 10 / 0.4)}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-teal{--tw-bg-opacity:1;background-color:rgb(0 128 128 / var(--tw-bg-opacity, 1))}.bg-teal\/20{background-color:rgb(0 128 128 / 0.2)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-opacity-95{--tw-bg-opacity:0.95}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-gold{--tw-gradient-from:#D4AF37 var(--tw-gradient-from-position);--tw-gradient-to:rgb(212 175 55 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-navy{--tw-gradient-from:#0A192F var(--tw-gradient-from-position);--tw-gradient-to:rgb(10 25 47 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-red-600{--tw-gradient-from:#dc2626 var(--tw-gradient-from-position);--tw-gradient-to:rgb(220 38 38 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-panelbg{--tw-gradient-to:rgb(30 41 59 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #1E293B var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-slate-900{--tw-gradient-to:rgb(15 23 42 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #0f172a var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-amber-600{--tw-gradient-to:#d97706 var(--tw-gradient-to-position)}.to-darkgreen{--tw-gradient-to:#1B4332 var(--tw-gradient-to-position)}.to-red-700{--tw-gradient-to:#b91c1c var(--tw-gradient-to-position)}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-3{padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:JetBrains Mono, monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amberGold{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-darkgreen{--tw-text-opacity:1;color:rgb(27 67 50 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-gold{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity, 1))}.text-lightteal{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-navy{--tw-text-opacity:1;color:rgb(10 25 47 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-teal{--tw-text-opacity:1;color:rgb(0 128 128 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-amberGold:hover{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.hover\:bg-red-900\/40:hover{background-color:rgb(127 29 29 / 0.4)}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-teal\/40:hover{background-color:rgb(0 128 128 / 0.4)}.hover\:from-red-500:hover{--tw-gradient-from:#ef4444 var(--tw-gradient-from-position);--tw-gradient-to:rgb(239 68 68 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:ring-gold:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(212 175 55 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:w-auto{width:auto}.sm\:flex-none{flex:none}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-10{padding:2.5rem}.sm\:p-4{padding:1rem}.sm\:p-5{padding:1.25rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:flex{display:flex}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-center{align-items:center}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
 <body class="min-h-screen flex flex-col justify-between custom-scrollbar">
 
-    <!-- TOP HEADER / BRANDING BAR -->
-    <header class="bg-navy border-b border-gold/30 sticky top-0 z-50 backdrop-blur-md bg-opacity-95 shadow-lg">
+    <!-- TOP HEADER / BRANDING & NAVIGATION BAR -->
+    <header class="bg-navy border-b border-gold/30 sticky top-0 z-50 backdrop-blur-md bg-opacity-95 shadow-lg no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
             
             <!-- Left Branding -->
@@ -87,40 +99,36 @@
                 <div>
                     <div class="flex items-center space-x-2">
                         <h1 class="font-extrabold text-white text-base sm:text-lg tracking-tight">SOVEREIGN JUBILEE PORTAL</h1>
-                        <span class="bg-gold/20 text-gold border border-gold/40 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Master Control</span>
+                        <span class="bg-gold/20 text-gold border border-gold/40 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">GitHub Ready</span>
                     </div>
-                    <p class="text-xs text-slate-400">Dr. Palesa MOU &amp; JET EOI Window 4 Strategic Transmission Hub</p>
+                    <p class="text-xs text-slate-400">Dr. Palesa MOU &amp; JET EOI Window 4 Transmission Hub</p>
                 </div>
             </div>
 
-            <!-- Right Status & Action Controls -->
-            <div class="flex flex-wrap items-center gap-2 sm:gap-3 no-print">
-                <div class="hidden md:flex items-center space-x-2 bg-darknavy px-3 py-1.5 rounded-lg border border-slate-700 text-xs">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span class="text-slate-300 font-mono">SCAPUSH STATUS: DIRECT SIGNED</span>
-                </div>
+            <!-- Center Tab Navigation -->
+            <div class="flex items-center bg-darknavy p-1 rounded-lg border border-slate-700">
+                <button id="tab-btn-dashboard" onclick="switchTab('dashboard')" class="px-4 py-1.5 rounded-md text-xs font-bold transition-all bg-gold text-navy shadow">
+                    <i class="fa-solid fa-chart-line mr-1.5"></i> Dashboard &amp; Asset Hub
+                </button>
+                <button id="tab-btn-document" onclick="switchTab('document')" class="px-4 py-1.5 rounded-md text-xs font-bold text-slate-400 hover:text-white transition-all">
+                    <i class="fa-solid fa-file-contract mr-1.5"></i> Full MOU Document
+                </button>
+            </div>
 
-                <!-- Export Actions -->
-                <button onclick="exportToPDF()" class="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold text-xs transition-all shadow-md flex items-center space-x-1.5">
-                    <i class="fa-solid fa-file-pdf"></i>
-                    <span>Export PDF Dossier</span>
-                </button>
-                <button onclick="downloadHTML()" class="px-3.5 py-1.5 rounded-lg bg-emeraldgreen hover:bg-darkgreen text-white font-semibold text-xs transition-all shadow-md flex items-center space-x-1.5 border border-emerald-500/30">
-                    <i class="fa-solid fa-code"></i>
-                    <span>GitHub Raw HTML</span>
-                </button>
-                <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-panelbg hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-600 transition-all flex items-center space-x-1">
-                    <i class="fa-solid fa-print"></i>
-                    <span class="hidden sm:inline">Print</span>
+            <!-- Right Actions -->
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="exportToPDF()" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 text-white font-semibold text-xs shadow-md flex items-center space-x-1.5">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Export Dossier</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- DASHBOARD CONTENT WRAPPER -->
-    <main id="pdf-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 flex-1 w-full">
+    <!-- TAB 1: EXECUTIVE DASHBOARD & EMBEDDED FILE TRANSMISSION HUB -->
+    <main id="view-dashboard" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 flex-1 w-full">
 
-        <!-- STRATEGIC SUMMARY HERO BANNER -->
+        <!-- STRATEGIC HERO BANNER -->
         <div class="bg-gradient-to-r from-navy via-panelbg to-darkgreen rounded-2xl p-6 sm:p-8 border border-gold/30 shadow-2xl relative overflow-hidden">
             <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
             
@@ -128,7 +136,7 @@
                 <div class="space-y-2 max-w-3xl">
                     <div class="flex flex-wrap items-center gap-2">
                         <span class="bg-teal/20 text-lightteal text-xs font-bold px-3 py-1 rounded-full border border-teal/40 uppercase tracking-wider">
-                            <i class="fa-solid fa-handshake mr-1"></i> Bilateral Alliance Signed
+                            <i class="fa-solid fa-handshake mr-1"></i> Bilateral Alliance Active
                         </span>
                         <span class="bg-gold/10 text-gold text-xs font-mono px-3 py-1 rounded-full border border-gold/30">
                             REF: SCAPUSH-JET-W4-IEA-LWANDILE
@@ -138,7 +146,7 @@
                         Inclusive Entrepreneurship Academy &amp; Lwandile Engineering Projects
                     </h2>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                        Master Execution Dashboard for the Just Energy Transition (JET) EOI Window 4 Sovereign Food &amp; Energy Security Infrastructure Project under Scapush Precision Execution Governance.
+                        Master Execution Control for the Just Energy Transition (JET) EOI Window 4 Sovereign Food &amp; Energy Security Infrastructure Project under Scapush Precision Execution Governance.
                     </p>
                 </div>
 
@@ -153,11 +161,82 @@
             </div>
         </div>
 
+        <!-- EMBEDDED FILE NAMES TRANSMISSION PANEL (NEWLY INTEGRATED) -->
+        <div class="bg-panelbg rounded-xl border-2 border-gold/50 p-5 shadow-2xl space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700 pb-3">
+                <h3 class="font-bold text-white text-base flex items-center gap-2">
+                    <i class="fa-solid fa-folder-tree text-gold"></i>
+                    Embedded File Transmission Hub (GitHub Pages Ready)
+                </h3>
+                <span class="bg-emerald-500/20 text-emerald-400 text-xs font-mono px-3 py-1 rounded-full border border-emerald-500/40">
+                    <i class="fa-solid fa-circle-check mr-1"></i> Relative Path Sync Active
+                </span>
+            </div>
+
+            <p class="text-xs text-slate-300">
+                The exact required files (<code class="text-gold font-mono">mou_sovereign_jubilee.html</code>[cite: 4, 5, 7], <code class="text-gold font-mono">mou_sovereign_jubilee.pdf</code>[cite: 4], and <code class="text-gold font-mono">mou_sovereign_jubilee_files/</code>[cite: 4, 5, 7]) are embedded below for instant transmission, web access, and verification.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Asset 1 -->
+                <div class="bg-darknavy p-4 rounded-xl border border-slate-700 flex flex-col justify-between space-y-3">
+                    <div>
+                        <div class="flex items-center space-x-2 text-teal mb-1">
+                            <i class="fa-solid fa-file-code text-lg"></i>
+                            <span class="font-bold text-white text-sm">mou_sovereign_jubilee.html</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400">Interactive web document featuring auto-scroll speech synthesis narrator.</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-800">
+                        <a href="file:///C:/Users/ASUS/Downloads/mou_sovereign_jubilee.html" target="_blank" class="flex-1 py-1.5 px-3 rounded bg-teal/20 hover:bg-teal/40 text-lightteal font-semibold text-xs text-center border border-teal/40 transition-all">
+                            <i class="fa-solid fa-eye mr-1"></i> Open HTML
+                        </a>
+                        <a href="file:///C:/Users/ASUS/Downloads/mou_sovereign_jubilee.html" download="" class="py-1.5 px-3 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs text-center transition-all">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Asset 2 -->
+                <div class="bg-darknavy p-4 rounded-xl border border-slate-700 flex flex-col justify-between space-y-3">
+                    <div>
+                        <div class="flex items-center space-x-2 text-red-400 mb-1">
+                            <i class="fa-solid fa-file-pdf text-lg"></i>
+                            <span class="font-bold text-white text-sm">mou_sovereign_jubilee.pdf</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400">Official printable executed Adobe PDF dossier copy.</p>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-800">
+                        <a href="file:///C:/Users/ASUS/Downloads/mou_sovereign_jubilee.pdf" target="_blank" class="flex-1 py-1.5 px-3 rounded bg-red-950/40 hover:bg-red-900/40 text-red-400 font-semibold text-xs text-center border border-red-500/30 transition-all">
+                            <i class="fa-solid fa-file-pdf mr-1"></i> Open PDF
+                        </a>
+                        <a href="file:///C:/Users/ASUS/Downloads/mou_sovereign_jubilee.pdf" download="" class="py-1.5 px-3 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs text-center transition-all">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Asset 3 -->
+                <div class="bg-darknavy p-4 rounded-xl border border-slate-700 flex flex-col justify-between space-y-3">
+                    <div>
+                        <div class="flex items-center space-x-2 text-gold mb-1">
+                            <i class="fa-solid fa-folder-open text-lg"></i>
+                            <span class="font-bold text-white text-sm">mou_sovereign_jubilee_files/</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400">Directory containing fonts, Tailwind config, and FontAwesome assets.</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-800">
+                        <div class="w-full py-1.5 px-3 rounded bg-gold/10 text-gold font-semibold text-xs text-center border border-gold/30">
+                            <i class="fa-solid fa-check mr-1"></i> Folder Synced in Root
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- KPI METRICS GRID -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            
-            <!-- KPI 1 -->
-            <div class="bg-panelbg p-4 rounded-xl border border-slate-700 hover:border-gold/50 transition-all shadow-md">
+            <div class="bg-panelbg p-4 rounded-xl border border-slate-700 shadow-md">
                 <div class="flex items-center justify-between text-slate-400 mb-2">
                     <span class="text-xs font-semibold uppercase tracking-wider">Solar PV Infrastructure</span>
                     <i class="fa-solid fa-solar-panel text-gold text-lg"></i>
@@ -166,8 +245,7 @@
                 <p class="text-[11px] text-slate-400 mt-1">Paired with 60 kWh LFP BESS</p>
             </div>
 
-            <!-- KPI 2 -->
-            <div class="bg-panelbg p-4 rounded-xl border border-slate-700 hover:border-lightteal/50 transition-all shadow-md">
+            <div class="bg-panelbg p-4 rounded-xl border border-slate-700 shadow-md">
                 <div class="flex items-center justify-between text-slate-400 mb-2">
                     <span class="text-xs font-semibold uppercase tracking-wider">Waste-to-Energy</span>
                     <i class="fa-solid fa-biohazard text-lightteal text-lg"></i>
@@ -176,18 +254,16 @@
                 <p class="text-[11px] text-slate-400 mt-1">Biodigester + 15 kW CHP Engine</p>
             </div>
 
-            <!-- KPI 3 -->
-            <div class="bg-panelbg p-4 rounded-xl border border-slate-700 hover:border-emerald-500/50 transition-all shadow-md">
+            <div class="bg-panelbg p-4 rounded-xl border border-slate-700 shadow-md">
                 <div class="flex items-center justify-between text-slate-400 mb-2">
-                    <span class="text-xs font-semibold uppercase tracking-wider">Agrigut Autonomy</span>
+                    <span class="text-xs font-semibold uppercase tracking-wider">Agri-Livestock Autonomy</span>
                     <i class="fa-solid fa-wheat-awn text-emerald-400 text-lg"></i>
                 </div>
                 <div class="text-2xl font-bold font-mono text-white">4.8k / 160</div>
                 <p class="text-[11px] text-slate-400 mt-1">Broilers Capacity / Swine Weaners</p>
             </div>
 
-            <!-- KPI 4 -->
-            <div class="bg-panelbg p-4 rounded-xl border border-slate-700 hover:border-amber-500/50 transition-all shadow-md">
+            <div class="bg-panelbg p-4 rounded-xl border border-slate-700 shadow-md">
                 <div class="flex items-center justify-between text-slate-400 mb-2">
                     <span class="text-xs font-semibold uppercase tracking-wider">Telemetry &amp; SCADA</span>
                     <i class="fa-solid fa-network-wired text-amberGold text-lg"></i>
@@ -200,10 +276,10 @@
         <!-- MAIN DASHBOARD BODY (2-COLUMN GRID) -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-            <!-- LEFT & CENTER (2 COLS): CHARTS & MOU DETAILS -->
+            <!-- LEFT & CENTER (2 COLS) -->
             <div class="lg:col-span-2 space-y-6">
 
-                <!-- FINANCIAL ALLOCATION CHART & BUDGET BREAKDOWN -->
+                <!-- FINANCIAL ALLOCATION CHART & BREAKDOWN -->
                 <div class="bg-panelbg rounded-xl border border-slate-700 p-5 shadow-lg space-y-4">
                     <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700 pb-3">
                         <h3 class="font-bold text-white text-base flex items-center gap-2">
@@ -214,13 +290,11 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                        <!-- Chart Container -->
                         <div class="relative h-64 w-full flex items-center justify-center">
                             <canvas id="budgetChart" width="460" height="320" style="display: block; box-sizing: border-box; height: 256px; width: 368.5px;"></canvas>
                         </div>
 
-                        <!-- Numerical List Breakdown -->
-                        <div class="space-y-3 text-xs">
+                        <div class="space-y-2.5 text-xs">
                             <div class="flex justify-between items-center p-2.5 rounded bg-darknavy border border-slate-700">
                                 <span class="flex items-center gap-2 text-slate-300">
                                     <span class="w-3 h-3 rounded-full bg-amber-500"></span>
@@ -240,7 +314,7 @@
                             <div class="flex justify-between items-center p-2.5 rounded bg-darknavy border border-slate-700">
                                 <span class="flex items-center gap-2 text-slate-300">
                                     <span class="w-3 h-3 rounded-full bg-teal"></span>
-                                    Perimeter Security &amp; Water Autonomy
+                                    Security Fence &amp; Borehole Water
                                 </span>
                                 <span class="font-mono font-bold text-white">R 475,000</span>
                             </div>
@@ -264,17 +338,16 @@
                     </div>
                 </div>
 
-                <!-- EXECUTIVE PARTNERSHIP GOVERNANCE MATRIX -->
+                <!-- GOVERNANCE MATRIX -->
                 <div class="bg-panelbg rounded-xl border border-slate-700 p-5 shadow-lg space-y-4">
                     <div class="border-b border-slate-700 pb-3">
                         <h3 class="font-bold text-white text-base flex items-center gap-2">
                             <i class="fa-solid fa-user-shield text-lightteal"></i>
-                            Executive Leadership &amp; Governance Roles
+                            Executive Partnership Leadership
                         </h3>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Partner A -->
                         <div class="bg-darknavy p-4 rounded-xl border border-slate-700 space-y-2">
                             <span class="text-[10px] font-bold text-lightteal uppercase tracking-wider block">Institutional Lead Sponsor</span>
                             <h4 class="font-bold text-white text-sm">Inclusive Entrepreneurship Academy (IEA)</h4>
@@ -282,138 +355,56 @@
                             <ul class="text-xs text-slate-300 space-y-1 list-disc pl-4 pt-1">
                                 <li>Social Impact &amp; Skills Transfer Framework</li>
                                 <li>JET Corridor Youth Incubator Governance</li>
-                                <li>Accredited Training Alignment &amp; Certification</li>
+                                <li>Accredited Training Alignment</li>
                             </ul>
                         </div>
 
-                        <!-- Partner B -->
                         <div class="bg-darknavy p-4 rounded-xl border border-slate-700 space-y-2">
                             <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Lead Technical Architect</span>
                             <h4 class="font-bold text-white text-sm">Lwandile Engineering Projects</h4>
                             <p class="text-xs text-gold font-medium">Lead Architect: Sipho Wiseman Khuzwayo</p>
                             <ul class="text-xs text-slate-300 space-y-1 list-disc pl-4 pt-1">
-                                <li>30kWp PV / 60kWh BESS / 70m³ Biodigester Engineering</li>
-                                <li>120-Tag SCADA &amp; IoT Automation Deployment</li>
-                                <li>Site Construction &amp; Technical Quality Control</li>
+                                <li>30kWp PV / 60kWh BESS Engineering</li>
+                                <li>120-Tag SCADA &amp; IoT Automation</li>
+                                <li>Site Construction &amp; Technical Quality</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- EXPANSION ROADMAP PANEL -->
-                <div class="bg-panelbg rounded-xl border border-slate-700 p-5 shadow-lg space-y-3">
-                    <h3 class="font-bold text-white text-base flex items-center gap-2">
-                        <i class="fa-solid fa-diagram-project text-amberGold"></i>
-                        Strategic Scale-Up Horizon (Phase 1 vs Phase 2)
-                    </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                        <div class="p-3.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30">
-                            <div class="flex justify-between items-center mb-1">
-                                <span class="text-xs font-bold text-emerald-400">PHASE 1 — MVP BASELINE</span>
-                                <span class="bg-emerald-500/20 text-emerald-300 text-[10px] px-2 py-0.5 rounded font-mono">ACTIVE (EOI W4)</span>
-                            </div>
-                            <p class="text-xs text-slate-300">ZAR 3.73M Baseline: 30 kWp PV, 60 kWh BESS, 70m³ Biodigester, 20,000m² Security Perimeter &amp; Borehole Water System.</p>
-                        </div>
-                        <div class="p-3.5 rounded-lg bg-amber-950/40 border border-amber-500/30">
-                            <div class="flex justify-between items-center mb-1">
-                                <span class="text-xs font-bold text-amber-400">PHASE 2 — COMMERCIAL EXPANSION</span>
-                                <span class="bg-amber-500/20 text-amber-300 text-[10px] px-2 py-0.5 rounded font-mono">ROADMAP</span>
-                            </div>
-                            <p class="text-xs text-slate-300">Commercial Agrivoltaic Scale: Expansion to 2.5 MW Solar PV / 10 MWh Utility BESS for Grid Export &amp; Industrial Processing.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- RIGHT COLUMN (1 COL): SIGNATURE STATUS & TRANSMISSION CHECKLIST -->
+            <!-- RIGHT COLUMN (1 COL) -->
             <div class="space-y-6">
 
-                <!-- TRANSMISSION & GITHUB AUDIT CHECKLIST -->
-                <div class="bg-panelbg rounded-xl border border-slate-700 p-5 shadow-lg space-y-4">
-                    <h3 class="font-bold text-white text-base flex items-center justify-between border-b border-slate-700 pb-3">
-                        <span><i class="fa-solid fa-shield-halved text-emerald-400 mr-2"></i> GitHub Transmission Readiness</span>
-                        <span class="text-xs font-mono text-emerald-400">100% READY</span>
-                    </h3>
-
-                    <div class="space-y-2.5 text-xs">
-                        <div class="flex items-start space-x-2.5 p-2 rounded bg-darknavy">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
-                            <div>
-                                <span class="font-semibold text-white">Single-File Bundle Standard</span>
-                                <p class="text-slate-400 text-[11px]">HTML/JS/CSS self-contained for direct web deployment.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-2.5 p-2 rounded bg-darknavy">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
-                            <div>
-                                <span class="font-semibold text-white">Bilingual Audio Engine Sync</span>
-                                <p class="text-slate-400 text-[11px]">SpeechSynthesis API enabled for inclusive narration.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-2.5 p-2 rounded bg-darknavy">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
-                            <div>
-                                <span class="font-semibold text-white">Encrypted Signatures Sealed</span>
-                                <p class="text-slate-400 text-[11px]">Dr. Palesa &amp; Sipho Khuzwayo digital signatures verified.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-2.5 p-2 rounded bg-darknavy">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
-                            <div>
-                                <span class="font-semibold text-white">Scapush Audit Alignment</span>
-                                <p class="text-slate-400 text-[11px]">Strict financial contingency &amp; SCADA compliance.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SIGNATURE & SEAL VERIFICATION BOARD -->
+                <!-- SIGNATURE VERIFICATION BOARD -->
                 <div class="bg-panelbg rounded-xl border border-slate-700 p-5 shadow-lg space-y-4">
                     <h3 class="font-bold text-white text-base border-b border-slate-700 pb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-file-signature text-gold"></i>
+                        <i class="fa-solid fa-signature text-gold"></i>
                         Signature Execution Verification
                     </h3>
 
-                    <!-- Signatory 1 Card -->
                     <div class="bg-darknavy p-3.5 rounded-lg border border-slate-700 space-y-2">
                         <div class="flex justify-between items-center text-xs">
                             <span class="font-bold text-white">Dr. Palesa Charlotte Felix-Faure</span>
                             <span class="text-emerald-400 text-[10px] font-bold uppercase"><i class="fa-solid fa-lock"></i> Sealed</span>
                         </div>
                         <p class="text-[11px] text-slate-400">Inclusive Entrepreneurship Academy (IEA)</p>
-                        <div class="h-14 bg-slate-900/80 rounded border border-slate-800 flex items-center justify-center p-2">
+                        <div class="h-12 bg-slate-900/80 rounded border border-slate-800 flex items-center justify-center p-2">
                             <span class="font-mono text-xs text-gold italic">Dr. P. C. Felix-Faure (Verified Digital)</span>
                         </div>
                     </div>
 
-                    <!-- Signatory 2 Card -->
                     <div class="bg-darknavy p-3.5 rounded-lg border border-slate-700 space-y-2">
                         <div class="flex justify-between items-center text-xs">
                             <span class="font-bold text-white">Sipho Wiseman Khuzwayo</span>
                             <span class="text-emerald-400 text-[10px] font-bold uppercase"><i class="fa-solid fa-lock"></i> Sealed</span>
                         </div>
                         <p class="text-[11px] text-slate-400">Lwandile Engineering Projects</p>
-                        <div class="h-14 bg-slate-900/80 rounded border border-slate-800 flex items-center justify-center p-2">
+                        <div class="h-12 bg-slate-900/80 rounded border border-slate-800 flex items-center justify-center p-2">
                             <span class="font-mono text-xs text-emerald-400 italic">S. W. Khuzwayo (Verified Lead Architect)</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- AUDIO CONTROL SUMMARY CARD -->
-                <div class="bg-panelbg rounded-xl border border-slate-700 p-5 shadow-lg space-y-3 no-print">
-                    <h3 class="font-bold text-white text-sm flex items-center gap-2">
-                        <i class="fa-solid fa-volume-high text-gold"></i>
-                        Accessibility Audio Briefing
-                    </h3>
-                    <p class="text-xs text-slate-300">Listen to the executive brief of this MOU and financial baseline dashboard.</p>
-                    <button id="btn-audio-brief" onclick="toggleDashboardAudio()" class="w-full py-2.5 rounded-lg bg-navy hover:bg-slate-800 text-gold font-semibold text-xs border border-gold/30 transition-all flex items-center justify-center space-x-2">
-                        <i id="audio-icon" class="fa-solid fa-play"></i>
-                        <span id="audio-text">Play Dashboard Audio Summary</span>
-                    </button>
                 </div>
 
             </div>
@@ -422,8 +413,245 @@
 
     </main>
 
+    <!-- TAB 2: FULL MOU DOCUMENT VIEW WITH NARRATOR ENGINE -->
+    <main id="view-document" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex-1 w-full hidden">
+
+        <!-- NARRATOR CONTROLS -->
+        <div class="bg-panelbg rounded-xl shadow-xl border-2 border-gold/40 p-4 mb-6 sticky top-16 z-40 flex flex-wrap items-center justify-between gap-4 backdrop-blur-md bg-opacity-95">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gold/20 text-navy flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-volume-high text-gold"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+                        <span>Narrator Engine (Dr. Palesa)</span>
+                        <span id="speech-status-tag" class="px-2 py-0.5 rounded text-xs bg-slate-800 text-slate-300 font-semibold border border-slate-700">Ready</span>
+                    </h3>
+                    <p class="text-xs text-slate-400">Auto-scrolling bilingual text-to-speech engine for inclusive accessibility</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                <button id="btn-play-all" onclick="togglePlayDocument()" class="flex-1 sm:flex-none px-5 py-2.5 rounded-lg bg-gold hover:bg-amberGold text-navy font-bold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                    <i id="play-icon" class="fa-solid fa-play"></i>
+                    <span id="play-btn-text">Play Auto-Scroll Document Audio</span>
+                </button>
+                <button onclick="stopAudio()" class="px-4 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm border border-slate-700 transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-stop text-red-500"></i> Stop
+                </button>
+                <div class="hidden lg:flex items-center gap-2 text-xs text-slate-400 pl-3 border-l border-slate-700">
+                    <label for="voice-select" class="font-semibold text-slate-300">Voice:</label>
+                    <select id="voice-select" onchange="changeVoice()" class="bg-darknavy border border-slate-700 rounded text-xs p-1.5 focus:ring-gold text-slate-200 max-w-[180px]"><option data-name="Microsoft David - English (United States)">Microsoft David - English (United States) (en-US)</option><option data-name="Microsoft Mark - English (United States)">Microsoft Mark - English (United States) (en-US)</option><option data-name="Microsoft Zira - English (United States)">Microsoft Zira - English (United States) (en-US)</option><option data-name="Google Deutsch">Google Deutsch (de-DE)</option><option data-name="Google US English">Google US English (en-US)</option><option data-name="Google UK English Female">Google UK English Female (en-GB)</option><option data-name="Google UK English Male">Google UK English Male (en-GB)</option><option data-name="Google español">Google español (es-ES)</option><option data-name="Google español de Estados Unidos">Google español de Estados Unidos (es-US)</option><option data-name="Google français">Google français (fr-FR)</option><option data-name="Google हिन्दी">Google हिन्दी (hi-IN)</option><option data-name="Google Bahasa Indonesia">Google Bahasa Indonesia (id-ID)</option><option data-name="Google italiano">Google italiano (it-IT)</option><option data-name="Google 日本語">Google 日本語 (ja-JP)</option><option data-name="Google 한국의">Google 한국의 (ko-KR)</option><option data-name="Google Nederlands">Google Nederlands (nl-NL)</option><option data-name="Google polski">Google polski (pl-PL)</option><option data-name="Google português do Brasil">Google português do Brasil (pt-BR)</option><option data-name="Google русский">Google русский (ru-RU)</option><option data-name="Google&nbsp;普通话（中国大陆）">Google&nbsp;普通话（中国大陆） (zh-CN)</option><option data-name="Google&nbsp;粤語（香港）">Google&nbsp;粤語（香港） (zh-HK)</option><option data-name="Google 國語（臺灣）">Google 國語（臺灣） (zh-TW)</option></select>
+                </div>
+            </div>
+        </div>
+
+        <!-- FULL MOU DOCUMENT CONTAINER -->
+        <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden text-slate-800 mb-12">
+            
+            <!-- HEADER BLOCK -->
+            <div class="bg-gradient-to-r from-navy via-slate-900 to-darkgreen p-6 sm:p-10 text-white relative">
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-4 border-b border-slate-700/60 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 rounded-full bg-gold/20 text-gold text-xs font-bold uppercase tracking-wider border border-gold/40">
+                            Sovereign Jubilee Green Campus MOU
+                        </span>
+                        <span class="px-3 py-1 rounded-full bg-teal/20 text-teal-300 text-xs font-bold uppercase tracking-wider border border-teal-500/40">
+                            JET EOI Window 4
+                        </span>
+                    </div>
+                    <div class="text-xs text-slate-300 font-mono">
+                        Date: October 2026 | Ref: SCAPUSH-JET-W4-IEA-LWANDILE
+                    </div>
+                </div>
+
+                <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+                    MEMORANDUM OF UNDERSTANDING (MOU)
+                </h1>
+                <p class="text-gold font-medium text-base sm:text-lg mb-6">
+                    Bilateral Strategic Alliance — Just Energy Transition (JET) EOI Window 4 Submission (R 3,734,500.00 GREEN MVP)
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
+                    <div class="bg-navy/80 p-3 rounded-lg border border-slate-700">
+                        <span class="text-slate-400 block mb-0.5">Application Reference</span>
+                        <span class="text-white font-semibold font-mono">SCAPUSH-JET-W4-IEA-LWANDILE</span>
+                    </div>
+                    <div class="bg-navy/80 p-3 rounded-lg border border-slate-700">
+                        <span class="text-slate-400 block mb-0.5">Baseline Funding Baseline</span>
+                        <span class="text-gold font-bold">ZAR 3,734,500.00 (Locked MVP)</span>
+                    </div>
+                    <div class="bg-navy/80 p-3 rounded-lg border border-slate-700">
+                        <span class="text-slate-400 block mb-0.5">Execution Standard</span>
+                        <span class="text-teal-300 font-semibold">Scapush Ceremonial &amp; Sovereign</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTIONS BODY -->
+            <div class="p-6 sm:p-10 space-y-10">
+
+                <!-- SECTION 1 -->
+                <section id="section-1" class="scroll-mt-36 p-6 rounded-xl bg-slate-50 border border-slate-200 transition-all">
+                    <div class="flex justify-between items-center mb-4 border-b border-slate-200 pb-3">
+                        <h2 class="text-xl font-bold text-navy flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-navy text-white text-xs flex items-center justify-center font-bold">1</span>
+                            Parties &amp; Purpose of Agreement
+                        </h2>
+                        <button onclick="speakSection('section-1')" class="px-3 py-1.5 text-xs font-semibold bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-low text-gold"></i> Listen Section
+                        </button>
+                    </div>
+
+                    <div class="prose max-w-none text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>
+                            This Bilateral Memorandum of Understanding (MOU) is entered into between the <strong>Inclusive Entrepreneurship Academy (IEA)</strong>, under the institutional directorship of <strong>Dr. Palesa Charlotte Felix-Faure (PhD)</strong>, and <strong>Lwandile Engineering Projects</strong>, led by Lead Applicant &amp; Microgrid System Architect <strong>Sipho Wiseman Khuzwayo</strong>.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                                <div class="text-xs font-bold text-teal uppercase tracking-wider mb-1">Institutional Lead Partner</div>
+                                <h3 class="text-lg font-bold text-navy mb-2">Inclusive Entrepreneurship Academy (IEA)</h3>
+                                <p class="text-xs text-slate-600 mb-2"><strong>Executive Lead:</strong> Dr. Palesa Charlotte Felix-Faure (PhD)</p>
+                                <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Entrepreneurial capacity building &amp; youth empowerment</li>
+                                    <li>Change-maker community integration across JET corridors</li>
+                                    <li>Skills transfer frameworks &amp; social impact metrics governance</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                                <div class="text-xs font-bold text-darkgreen uppercase tracking-wider mb-1">Lead Applicant &amp; Microgrid Architect</div>
+                                <h3 class="text-lg font-bold text-navy mb-2">Lwandile Engineering Projects</h3>
+                                <p class="text-xs text-slate-600 mb-2"><strong>Executive Lead:</strong> Sipho Wiseman Khuzwayo</p>
+                                <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>MVP Waste-to-Value Microgrid (30 kWp PV + 60 kWh LFP BESS)</li>
+                                    <li>120-tag SCADA hub telemetry &amp; IoT telemetry automation</li>
+                                    <li>Agri-industrial infrastructure engineering &amp; execution oversight</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 text-white p-5 rounded-xl border-l-4 border-gold mt-4 shadow-md">
+                            <h4 class="text-gold font-bold text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-bolt text-gold"></i> Core Bilateral Purpose &amp; Green R 3,734,500.00 Baseline MVP
+                            </h4>
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-3">
+                                Both parties agree to jointly implement the <strong>R 3,734,500.00 MVP Baseline</strong> for the Just Energy Transition (JET) EOI Window 4 Food &amp; Energy Sovereignty. The baseline infrastructure encompasses a <strong>30 kWp Solar PV system</strong>, a <strong>60 kWh Lithium Iron Phosphate BESS</strong>, a <strong>70m³ Biodigester + 15 kW CHP Engine</strong>, <strong>4,800 Broilers</strong> capacity, <strong>160 Swine Weaners</strong> facility, <strong>20,000m² security fencing</strong>, and <strong>borehole water autonomy</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 2 -->
+                <section id="section-2" class="scroll-mt-36 p-6 rounded-xl bg-slate-50 border border-slate-200 transition-all">
+                    <div class="flex justify-between items-center mb-4 border-b border-slate-200 pb-3">
+                        <h2 class="text-xl font-bold text-navy flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-navy text-white text-xs flex items-center justify-center font-bold">2</span>
+                            Execution Roles &amp; Governance Matrix
+                        </h2>
+                        <button onclick="speakSection('section-2')" class="px-3 py-1.5 text-xs font-semibold bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-low text-gold"></i> Listen Section
+                        </button>
+                    </div>
+
+                    <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white">
+                        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                            <thead>
+                                <tr class="bg-navy text-white">
+                                    <th class="p-3 sm:p-4 font-semibold border-b border-slate-700">Partner Entity</th>
+                                    <th class="p-3 sm:p-4 font-semibold border-b border-slate-700">Executive Designee</th>
+                                    <th class="p-3 sm:p-4 font-semibold border-b border-slate-700">Designated EOI Role</th>
+                                    <th class="p-3 sm:p-4 font-semibold border-b border-slate-700">Primary Operational Scope</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-slate-700">
+                                <tr>
+                                    <td class="p-3 sm:p-4 font-bold text-navy">Inclusive Entrepreneurship Academy (IEA)</td>
+                                    <td class="p-3 sm:p-4 font-medium text-slate-900">Dr. Palesa Charlotte Felix-Faure (PhD)</td>
+                                    <td class="p-3 sm:p-4 font-semibold text-teal">Institutional Lead &amp; Skills Sponsor</td>
+                                    <td class="p-3 sm:p-4">Capacity building, accredited training alignment, enterprise incubator governance.</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 sm:p-4 font-bold text-navy">Lwandile Engineering Projects</td>
+                                    <td class="p-3 sm:p-4 font-medium text-slate-900">Sipho Wiseman Khuzwayo</td>
+                                    <td class="p-3 sm:p-4 font-semibold text-darkgreen">Lead Applicant &amp; Technical Architect</td>
+                                    <td class="p-3 sm:p-4">Microgrid construction (30kWp PV / 60kWh BESS), 120-tag SCADA hub, biodigester deployment.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- SECTION 3 -->
+                <section id="section-3" class="scroll-mt-36 p-6 rounded-xl bg-slate-50 border border-slate-200 transition-all">
+                    <div class="flex justify-between items-center mb-4 border-b border-slate-200 pb-3">
+                        <h2 class="text-xl font-bold text-navy flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-navy text-white text-xs flex items-center justify-center font-bold">3</span>
+                            Binding Financial Breakdown
+                        </h2>
+                        <button onclick="speakSection('section-3')" class="px-3 py-1.5 text-xs font-semibold bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-low text-gold"></i> Listen Section
+                        </button>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm space-y-3">
+                        <div class="flex justify-between items-center text-xs sm:text-sm py-2 border-b border-slate-100">
+                            <span class="text-slate-600 font-medium">Locked MVP CAPEX Baseline Subtotal</span>
+                            <span class="font-mono font-bold text-slate-900">ZAR 3,395,000.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs sm:text-sm py-2 border-b border-slate-100">
+                            <span class="text-slate-600 font-medium">Mandatory Contingency Allocation (10%)</span>
+                            <span class="font-mono font-bold text-slate-900">ZAR 339,500.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm sm:text-base py-3 bg-navy text-white px-4 rounded-lg font-bold">
+                            <span class="text-gold">TOTAL EOI FUNDING BASELINE (GREEN MVP)</span>
+                            <span class="font-mono text-gold text-lg">ZAR 3,734,500.00</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 4 -->
+                <section id="section-4" class="scroll-mt-36 p-6 rounded-xl bg-slate-50 border border-slate-200 transition-all">
+                    <div class="flex justify-between items-center mb-4 border-b border-slate-200 pb-3">
+                        <h2 class="text-xl font-bold text-navy flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-lg bg-navy text-white text-xs flex items-center justify-center font-bold">4</span>
+                            Executive Signatures &amp; Sovereign Seal
+                        </h2>
+                        <button onclick="speakSection('section-4')" class="px-3 py-1.5 text-xs font-semibold bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-volume-low text-gold"></i> Listen Section
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-xs font-bold text-teal uppercase mb-1">Institutional Lead Signatory</div>
+                            <h3 class="font-bold text-navy text-base">Dr. Palesa Charlotte Felix-Faure (PhD)</h3>
+                            <p class="text-xs text-slate-500 mb-3">Founder &amp; Director — Inclusive Entrepreneurship Academy</p>
+                            <div class="sig-canvas h-36 rounded-lg flex flex-col items-center justify-center p-3 text-center">
+                                <span class="font-mono text-sm text-gold font-bold italic">Dr. P. C. Felix-Faure</span>
+                                <span class="text-[10px] text-emerald-600 font-bold mt-1"><i class="fa-solid fa-lock"></i> Digital Seal Verified</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-xs font-bold text-darkgreen uppercase mb-1">Lead Applicant Signatory</div>
+                            <h3 class="font-bold text-navy text-base">Sipho Wiseman Khuzwayo</h3>
+                            <p class="text-xs text-slate-500 mb-3">Lead Architect — Lwandile Engineering Projects</p>
+                            <div class="sig-canvas h-36 rounded-lg flex flex-col items-center justify-center p-3 text-center">
+                                <span class="font-mono text-sm text-darkgreen font-bold italic">S. W. Khuzwayo</span>
+                                <span class="text-[10px] text-emerald-600 font-bold mt-1"><i class="fa-solid fa-lock"></i> Digital Seal Verified</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
     <!-- FOOTER BAR -->
-    <footer class="bg-navy border-t border-slate-800 py-4 px-4 text-center text-xs text-slate-400 mt-8">
+    <footer class="bg-navy border-t border-slate-800 py-4 px-4 text-center text-xs text-slate-400 no-print">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <div>
                 © 2026 Sovereign Jubilee Portal — Inclusive Entrepreneurship Academy &amp; Lwandile Engineering Projects
@@ -434,30 +662,39 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT CONTROLLERS -->
+    <!-- JAVASCRIPT LOGIC ENGINE -->
     <script>
+        // TAB SWITCHING LOGIC
+        function switchTab(tabName) {
+            const dashView = document.getElementById('view-dashboard');
+            const docView = document.getElementById('view-document');
+            const btnDash = document.getElementById('tab-btn-dashboard');
+            const btnDoc = document.getElementById('tab-btn-document');
+
+            if (tabName === 'dashboard') {
+                dashView.classList.remove('hidden');
+                docView.classList.add('hidden');
+                btnDash.className = "px-4 py-1.5 rounded-md text-xs font-bold transition-all bg-gold text-navy shadow";
+                btnDoc.className = "px-4 py-1.5 rounded-md text-xs font-bold text-slate-400 hover:text-white transition-all";
+                stopAudio();
+            } else {
+                dashView.classList.add('hidden');
+                docView.classList.remove('hidden');
+                btnDoc.className = "px-4 py-1.5 rounded-md text-xs font-bold transition-all bg-gold text-navy shadow";
+                btnDash.className = "px-4 py-1.5 rounded-md text-xs font-bold text-slate-400 hover:text-white transition-all";
+            }
+        }
+
         // CHART.JS INITIALIZATION
         document.addEventListener('DOMContentLoaded', function() {
             const ctx = document.getElementById('budgetChart').getContext('2d');
             new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: [
-                        'Solar PV & Energy BESS', 
-                        'Agri-Livestock Infra', 
-                        'Water & Security Fence', 
-                        'SCADA Telemetry', 
-                        'Contingency (10%)'
-                    ],
+                    labels: ['Solar & BESS', 'Agri Facilities', 'Water & Fencing', 'SCADA Hub', 'Contingency'],
                     datasets: [{
                         data: [1450000, 1120000, 475000, 350000, 339500],
-                        backgroundColor: [
-                            '#F59E0B', // Amber
-                            '#10B981', // Emerald
-                            '#008080', // Teal
-                            '#0EA5E9', // Sky Blue
-                            '#D4AF37'  // Gold
-                        ],
+                        backgroundColor: ['#F59E0B', '#10B981', '#008080', '#0EA5E9', '#D4AF37'],
                         borderWidth: 2,
                         borderColor: '#1E293B'
                     }]
@@ -465,92 +702,171 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    let value = context.raw || 0;
-                                    return ' ZAR ' + value.toLocaleString();
-                                }
-                            }
-                        }
-                    },
+                    plugins: { legend: { display: false } },
                     cutout: '68%'
                 }
             });
         });
 
-        // AUDIO SPEECH SYNTHESIS ENGINE
+        // SPEECH SYNTHESIS NARRATOR ENGINE
+        let synth = window.speechSynthesis;
+        let voices = [];
+        let selectedVoice = null;
         let isSpeaking = false;
-        let speechUtterance = null;
+        let currentSectionIndex = 0;
+        const sectionIds = ['section-1', 'section-2', 'section-3', 'section-4'];
 
-        function toggleDashboardAudio() {
-            if (!('speechSynthesis' in window)) {
-                alert('Text-to-speech is not supported in this browser.');
+        function populateVoices() {
+            if (!synth) return;
+            voices = synth.getVoices();
+            const voiceSelect = document.getElementById('voice-select');
+            if (!voiceSelect) return;
+            voiceSelect.innerHTML = '';
+
+            const femaleKeywords = ['female', 'zira', 'samantha', 'karen', 'google us english'];
+            let femaleVoice = voices.find(v => femaleKeywords.some(k => v.name.toLowerCase().includes(k)));
+
+            voices.forEach((voice) => {
+                const option = document.createElement('option');
+                option.textContent = `${voice.name} (${voice.lang})`;
+                option.setAttribute('data-name', voice.name);
+                if (femaleVoice && voice.name === femaleVoice.name) {
+                    option.selected = true;
+                    selectedVoice = voice;
+                }
+                voiceSelect.appendChild(option);
+            });
+
+            if (!selectedVoice && voices.length > 0) selectedVoice = voices[0];
+        }
+
+        populateVoices();
+        if (synth && synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = populateVoices;
+        }
+
+        function changeVoice() {
+            const voiceSelect = document.getElementById('voice-select');
+            const selectedName = voiceSelect.selectedOptions[0].getAttribute('data-name');
+            selectedVoice = voices.find(v => v.name === selectedName);
+        }
+
+        function clearHighlights() {
+            sectionIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.remove('reading-highlight');
+            });
+        }
+
+        function highlightSection(sectionId) {
+            clearHighlights();
+            const el = document.getElementById(sectionId);
+            if (el) {
+                el.classList.add('reading-highlight');
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        function speakSection(sectionId) {
+            stopAudio();
+            highlightSection(sectionId);
+            const sectionEl = document.getElementById(sectionId);
+            if (!sectionEl) return;
+
+            const text = sectionEl.innerText.replace(/Listen Section/g, '');
+            const utterance = new SpeechSynthesisUtterance(text);
+            if (selectedVoice) utterance.voice = selectedVoice;
+            utterance.rate = 0.95;
+
+            utterance.onstart = () => {
+                isSpeaking = true;
+                updateStatus('Narrating Section', true);
+            };
+
+            utterance.onend = () => {
+                isSpeaking = false;
+                clearHighlights();
+                updateStatus('Ready', false);
+            };
+
+            synth.speak(utterance);
+        }
+
+        function togglePlayDocument() {
+            if (isSpeaking) {
+                stopAudio();
+                return;
+            }
+            currentSectionIndex = 0;
+            playNextSectionSequence();
+        }
+
+        function playNextSectionSequence() {
+            if (currentSectionIndex >= sectionIds.length) {
+                stopAudio();
+                updateStatus('Completed Narration', false);
                 return;
             }
 
-            const btnText = document.getElementById('audio-text');
-            const btnIcon = document.getElementById('audio-icon');
+            const sectionId = sectionIds[currentSectionIndex];
+            highlightSection(sectionId);
 
-            if (isSpeaking) {
-                window.speechSynthesis.cancel();
-                isSpeaking = false;
-                btnText.innerText = "Play Dashboard Audio Summary";
-                btnIcon.className = "fa-solid fa-play";
-            } else {
-                const text = "Welcome to the Sovereign Jubilee MOU Master Control Dashboard. " +
-                    "This bilateral alliance between the Inclusive Entrepreneurship Academy, led by Dr. Palesa Charlotte Felix-Faure, " +
-                    "and Lwandile Engineering Projects, led by Sipho Wiseman Khuzwayo, establishes an approved baseline budget of " +
-                    "3,734,500 Rand under the Just Energy Transition EOI Window 4. " +
-                    "Infrastructure includes a 30 kilowatt-peak Solar PV system, a 60 kilowatt-hour LFP battery storage system, " +
-                    "a 70 cubic-meter biodigester with a 15 kilowatt CHP engine, 20,000 square meters of security fencing, and a 120-tag SCADA telemetry hub.";
+            const sectionEl = document.getElementById(sectionId);
+            const text = sectionEl.innerText.replace(/Listen Section/g, '');
+            const utterance = new SpeechSynthesisUtterance(text);
+            if (selectedVoice) utterance.voice = selectedVoice;
+            utterance.rate = 0.95;
 
-                speechUtterance = new SpeechSynthesisUtterance(text);
-                speechUtterance.rate = 0.95;
-                speechUtterance.pitch = 1.0;
-
-                speechUtterance.onend = function() {
-                    isSpeaking = false;
-                    btnText.innerText = "Play Dashboard Audio Summary";
-                    btnIcon.className = "fa-solid fa-play";
-                };
-
-                window.speechSynthesis.speak(speechUtterance);
+            utterance.onstart = () => {
                 isSpeaking = true;
-                btnText.innerText = "Pause Audio Summary";
-                btnIcon.className = "fa-solid fa-pause";
+                document.getElementById('play-btn-text').innerText = 'Pause Auto-Scroll Audio';
+                document.getElementById('play-icon').className = 'fa-solid fa-pause';
+                updateStatus(`Auto-Scrolling Section ${currentSectionIndex + 1}/${sectionIds.length}`, true);
+            };
+
+            utterance.onend = () => {
+                currentSectionIndex++;
+                if (isSpeaking) playNextSectionSequence();
+            };
+
+            synth.speak(utterance);
+        }
+
+        function stopAudio() {
+            if (synth) synth.cancel();
+            isSpeaking = false;
+            clearHighlights();
+            const btnText = document.getElementById('play-btn-text');
+            const btnIcon = document.getElementById('play-icon');
+            if (btnText && btnIcon) {
+                btnText.innerText = 'Play Auto-Scroll Document Audio';
+                btnIcon.className = 'fa-solid fa-play';
+            }
+            updateStatus('Ready', false);
+        }
+
+        function updateStatus(text, active) {
+            const tag = document.getElementById('speech-status-tag');
+            if (!tag) return;
+            tag.innerText = text;
+            if (active) {
+                tag.className = 'px-2 py-0.5 rounded text-xs bg-gold text-navy font-bold animate-pulse';
+            } else {
+                tag.className = 'px-2 py-0.5 rounded text-xs bg-slate-800 text-slate-300 font-semibold border border-slate-700';
             }
         }
 
         // PDF EXPORT FUNCTION
         function exportToPDF() {
-            const element = document.getElementById('pdf-content');
+            const element = document.getElementById('view-dashboard');
             const opt = {
-                margin:       0.3,
-                filename:     'MOU_Sovereign_Jubilee_Master_Dashboard.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#060D18' },
-                jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+                margin: 0.3,
+                filename: 'Sovereign_Jubilee_MOU_Executive_Dossier.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, backgroundColor: '#060D18' },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
             };
-
-            // Execute PDF download
             html2pdf().set(opt).from(element).save();
-        }
-
-        // RAW HTML DOWNLOAD FUNCTION FOR GITHUB
-        function downloadHTML() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'mou_sovereign_jubilee_dashboard.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
         }
     </script>
 
